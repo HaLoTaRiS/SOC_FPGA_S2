@@ -1,0 +1,23 @@
+19:58:57 **** Auto Build of configuration Debug for project seance2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tp_seance_2.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tp_seance_2.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../seance2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tp_seance_2.d" -MT"src/tp_seance_2.o" -o "src/tp_seance_2.o" "../src/tp_seance_2.c"
+'Finished building: ../src/tp_seance_2.c'
+' '
+'Building target: seance2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../seance2_bsp/ps7_cortexa9_0/lib -o "seance2.elf"  ./src/platform.o ./src/tp_seance_2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: seance2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size seance2.elf  |tee "seance2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30528	   1544	  23256	  55328	   d820	seance2.elf
+'Finished building: seance2.elf.size'
+' '
+
+19:58:58 Build Finished (took 1s.568ms)
+
